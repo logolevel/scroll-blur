@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.sticky-header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100; /* Ensure it stays on top */
+}
+
+.flyout {
+    height: 100vh;
+    background-color: #e0e0e0;
+    padding: 20px;
+    display: none; /* Hidden by default */
+    position: absolute; /* To position it relative to the viewport */
+    top: 60px; /* Adjust based on header height */
+    left: 0;
+    width: 100%;
+    box-sizing: border-box; /* Include padding in width and height */
+    overflow-y: auto; /* Add vertical scrollbar when content overflows */
+}
+
+.flyout input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    position: sticky; /* Make the input field sticky */
+    top: 0; /* Stick it to the top of its containing block */
+    background-color: #e0e0e0; /* Ensure background covers underlying content */
+    z-index: 1; /* Ensure it's above other content in the flyout */
+}
